@@ -1,0 +1,32 @@
+<%- include('templates/header') -%>
+        <h1>Pixabay Gallery Search(Express Version) </h1>
+        <form action="/results" method="GET">
+            <label>Keyword: <input id= "name" type="text" name="keyword"/></label>
+            <br><br>
+            <label for="Orientation">Orientation:</label>
+            <select name="orientation">
+              <option value="horizontal">Horizontal</option>
+              <option value="vertical">Vertical</option>
+            </select>
+            <input id="btnSubmit" type="button" value="Submit"/>
+        </form>
+        <div class="container">
+      <div class="row">
+        <div class="col">
+            likes: <%=image.hits[0].likes%>
+            <img src='<%=image.hits[0].previewURL%>'>        
+        </div>
+        <div class="col">
+            likes: <%=image.hits[1].likes%>
+            <img src='<%=image.hits[1].previewURL%>'>
+        </div>
+        <div class="col">
+            likes: <%=image.hits[2].likes%>
+            <img src='<%=image.hits[2].previewURL%>'>
+        </div>
+        <div class="col">
+            likes: <%=image.hits[3].likes%>
+            <img src='<%=image.hits[3].previewURL%>'>
+        </div>
+      </div>
+<%- include('templates/footer') -%>
